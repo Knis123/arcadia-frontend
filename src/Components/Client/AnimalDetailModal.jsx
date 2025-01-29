@@ -35,7 +35,7 @@ const AnimalDetailModal = ({ animalId }) => {
   }
 
   if (isError || !animal) {
-    return <Text color="red.500">Error fetching animal details.</Text>;
+    return <Text color="red.500">Erreur récupérant les détails des animaux.</Text>;
   }
 
   return (
@@ -81,12 +81,9 @@ const AnimalDetailModal = ({ animalId }) => {
           </Heading>
           <Text fontSize="lg" color={textColor} mb={1}>
             <Icon as={FaPaw} mr={2} />
-            <strong>Species:</strong> {animal.race || 'Unknown'}
+            <strong>Espèces:</strong> {animal.race || 'Unknown'}
           </Text>
-          <Text fontSize="lg" color={textColor}>
-            <Icon as={FaLeaf} mr={2} />
-            <strong>Diet:</strong> {animal.diet || 'Unknown'}
-          </Text>
+          
          
         </Box>
       </Flex>
@@ -96,7 +93,7 @@ const AnimalDetailModal = ({ animalId }) => {
       {/* Veterinary Reports Section */}
       <Box>
         <Heading size="lg" color={headingColor} mb={4}>
-          Veterinary Reports
+         Rapports vétérinaires
         </Heading>
         {animal.vetReports?.length > 0 ? (
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
@@ -111,7 +108,7 @@ const AnimalDetailModal = ({ animalId }) => {
                
               >
                 <Text fontSize="lg" fontWeight="bold" mb={2} color="white">
-                  <strong>Health Status:</strong> {report.state || 'N/A'}
+                  <strong>État de santé:</strong> {report.state || 'N/A'}
                 </Text>
                 <Text fontSize="sm" color="gray.500" mb={2}>
                   <strong>Date:</strong> {new Date(report.date).toLocaleDateString() || 'N/A'}
@@ -123,7 +120,7 @@ const AnimalDetailModal = ({ animalId }) => {
             ))}
           </SimpleGrid>
         ) : (
-          <Text color={textColor}>No veterinary reports available.</Text>
+          <Text color={textColor}>Aucun rapport vétérinaire disponible.</Text>
         )}
       </Box>
     </Box>

@@ -46,7 +46,7 @@ const HabitatDetail = ({ habitatId }) => {
     return (
       <Flex justify="center" align="center" height="100vh" bg="gray.800">
         <Text color="red.500" fontSize="xl">
-          Error fetching habitat details
+          Error Rending Habitat Détails
         </Text>
       </Flex>
     );
@@ -62,7 +62,7 @@ const HabitatDetail = ({ habitatId }) => {
       </Text>
 
       <Heading as="h2" size="lg" color="yellow.400" mb={4} fontFamily="serif">
-        Animals in this Habitat
+        Animaux dans cet habitat
       </Heading>
       <Grid templateColumns="repeat(auto-fit, minmax(140px, 1fr))" gap={6}>
         {data.animals?.map((animal) => (
@@ -95,14 +95,14 @@ const HabitatDetail = ({ habitatId }) => {
         <ModalOverlay />
         <ModalContent bg="gray.800" color="white" maxW="80%">
           <ModalHeader fontFamily="serif" fontSize="2xl" color="yellow.400">
-            Animal Details
+            Détails des animaux
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody>
             {selectedAnimalId ? (
               <AnimalDetailModal animalId={selectedAnimalId} />
             ) : (
-              <Text>No animal selected.</Text>
+              <Text>Aucun animal sélectionné.</Text>
             )}
           </ModalBody>
         </ModalContent>
