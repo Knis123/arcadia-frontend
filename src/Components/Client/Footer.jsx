@@ -12,11 +12,12 @@ import {
 } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaInstagram, FaInfoCircle, FaLink, FaPhone, FaHome, FaTag, FaInfo, FaEnvelope } from 'react-icons/fa';
 import Logo from '../../assets/logo.jpg';
+import { Link as RouterLink } from 'react-router-dom';
 
 // Composant ListHeader pour afficher un en-tête de section avec une icône
 const ListHeader = ({ icon, children, color }) => (
   <HStack spacing={2} mb={4}>
-    {icon && <Box as={icon} color={color} />} // Affiche une icône si elle est fournie
+    {icon && <Box as={icon} color={color} />} 
     <Text fontWeight="bold" fontSize="lg" color={color}>
       {children}
     </Text>
@@ -52,15 +53,15 @@ const Footer = () => {
             <ListHeader icon={FaLink} color="yellow.300">Liens</ListHeader>
             <HStack spacing={2}>
               <FaHome />
-              <Link href="#">Accueil</Link>
+              <RouterLink to="/">Acceuil</RouterLink>
             </HStack>
             <HStack spacing={2}>
               <FaTag />
-              <Link href="#">Service</Link>
+              <RouterLink to="/services">Services</RouterLink>
             </HStack>
             <HStack spacing={2}>
               <FaEnvelope />
-              <Link href="#">Contact</Link>
+              <RouterLink to="/habitat">Habitats</RouterLink>
             </HStack>
           </Stack>
 
