@@ -85,7 +85,7 @@ const CreateReview = () => {
         mb="6"
         color="yellow.400"
       >
-        Share Your Experience
+        Partagez votre expérience
       </Heading>
 
       <Formik
@@ -107,7 +107,7 @@ const CreateReview = () => {
                     </FormLabel>
                     <Input
                       {...field}
-                      placeholder="Enter your pseudo"
+                      placeholder="Entrez votre pseudo"
                       borderRadius="md"
                       size="lg"
                       _focus={{ borderColor: "teal.500" }}
@@ -124,11 +124,11 @@ const CreateReview = () => {
                     isInvalid={form.errors.comment && form.touched.comment}
                   >
                     <FormLabel color="yellow.400" fontWeight="semibold">
-                      Comment
+                     Commentaire
                     </FormLabel>
                     <Textarea
                       {...field}
-                      placeholder="Enter your comment"
+                      placeholder="Entrez votre commentaire"
                       resize="vertical"
                       borderRadius="md"
                       size="lg"
@@ -149,7 +149,7 @@ const CreateReview = () => {
                 borderRadius="md"
                 _hover={{ bg: "teal.600" }}
               >
-                Submit Review
+               Soumettre 
               </Button>
             </Stack>
           </Form>

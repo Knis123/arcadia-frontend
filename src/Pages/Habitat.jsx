@@ -65,7 +65,7 @@ const Habitat = () => {
           </Flex>
         ) : isError ? (
           <Text color="red.400" textAlign="center" fontSize="xl">
-            Error loading habitats. Please try again later.
+           Erreur de chargement des habitats.Veuillez réessayer plus tard.
           </Text>
         ) : (
           <Flex wrap="wrap" gap={6} justify="center">
@@ -104,7 +104,7 @@ const Habitat = () => {
                     leftIcon={<FaInfoCircle />}
                     onClick={() => handleHabitatClick(habitat)}
                   >
-                    Learn More
+                    plus de détail
                   </Button>
                 </Box>
               </Box>
@@ -118,13 +118,13 @@ const Habitat = () => {
         <ModalOverlay />
         <ModalContent bg="gray.800" color="white">
           <ModalHeader fontSize="2xl" fontWeight="bold" color="yellow.400">
-            Habitat Details
+           habitat détails
           </ModalHeader>
           <ModalBody>
             {selectedHabitat ? (
               <HabitatDetail habitatId={selectedHabitat._id} />
             ) : (
-              <Text>No habitat selected.</Text>
+              <Text>Aucun habitat sélectionné.</Text>
             )}
           </ModalBody>
         </ModalContent>
