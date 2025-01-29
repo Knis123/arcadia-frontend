@@ -80,7 +80,7 @@ const CreateService = () => {
             borderTopRadius="md"
             p={4}
           >
-            Create New Service
+            Créer un nouveau service
           </ModalHeader>
           <ModalCloseButton color="black" />
           <ModalBody p={6}>
@@ -93,11 +93,11 @@ const CreateService = () => {
                 <Form>
                   <Grid templateColumns="repeat(2, 1fr)" gap={6} mt={4}>
                     <FormControl isInvalid={Boolean(ErrorMessage)}>
-                      <FormLabel htmlFor="name">Service Name</FormLabel>
+                      <FormLabel htmlFor="name">Nom de service</FormLabel>
                       <Field
                         name="name"
                         as={Input}
-                        placeholder="Enter service name"
+                        placeholder="Entrer nom de service"
                       />
                       <ErrorMessage name="name" component={FormErrorMessage} />
                     </FormControl>
@@ -107,7 +107,7 @@ const CreateService = () => {
                       <Field
                         name="description"
                         as={Textarea}
-                        placeholder="Enter description"
+                        placeholder="Entrez description"
                       />
                       <ErrorMessage name="description" component={FormErrorMessage} />
                     </FormControl>
@@ -121,7 +121,7 @@ const CreateService = () => {
                       variant="outline"
                       borderRadius="md"
                     >
-                      Cancel
+                      Annuler
                     </Button>
                     <Button
                       colorScheme="teal"
@@ -136,7 +136,7 @@ const CreateService = () => {
                         boxShadow: 'xl',
                       }}
                     >
-                      Create Zoo Service
+                      Créer un service 
                     </Button>
                   </ModalFooter>
                 </Form>

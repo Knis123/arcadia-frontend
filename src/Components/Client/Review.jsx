@@ -18,7 +18,7 @@ const Review = () => {
   return (
     <Box  py={12} px={4} bg="gray.800">
       <Heading size="lg" textAlign="center" mb={8} color="yellow.400">
-        What Our Customers Are Saying
+        Ce que nos clients disent
       </Heading>
 
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={8}>

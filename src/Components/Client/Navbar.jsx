@@ -94,7 +94,7 @@ const Navbar = () => {
               size="sm"
               _hover={{ bg: 'teal.600' }}
             >
-              Login
+              Se connecter
             </Button>
           </HStack>
         </HStack>

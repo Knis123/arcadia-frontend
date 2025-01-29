@@ -99,17 +99,17 @@ const AnimalReport = () => {
   };
 
   if (isLoading) return <Spinner size="xl" color="teal.500" display="block" mx="auto" my={6} />;
-  if (isError) return <Text color="red.500" fontSize="lg" textAlign="center">Error loading animals</Text>;
+  if (isError) return <Text color="red.500" fontSize="lg" textAlign="center">Erreur de chargement des animaux</Text>;
 
   return (
     <Box p={8} maxW="8xl" mx="auto" bg="gray.50" >
-      <Heading size="xl" color="teal.600" mb={8} textAlign="center" fontWeight="bold">Animal Management Dashboard</Heading>
+      <Heading size="xl" color="teal.600" mb={8} textAlign="center" fontWeight="bold">Tableau de bord de gestion des animaux</Heading>
 
       {/* Animal Data Grid Table */}
       <Table mb={6}>
         <Thead>
           <Tr>
-            <Th>Name</Th>
+            <Th>Nom</Th>
             <Th>Race</Th>
             <Th>Habitat</Th>
             <Th>Actions</Th>
@@ -172,10 +172,10 @@ const AnimalReport = () => {
       <Modal isOpen={isAddReportOpen} onClose={onAddReportClose} size="xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Add Vet Report</ModalHeader>
+          <ModalHeader>Ajouter le rapport Knows</ModalHeader>
           <ModalBody>
             <FormControl mb={4}>
-              <FormLabel>State</FormLabel>
+              <FormLabel>État</FormLabel>
               <Input
                 placeholder="State"
                 value={reportData.state}
@@ -183,7 +183,7 @@ const AnimalReport = () => {
               />
             </FormControl>
             <FormControl mb={4}>
-              <FormLabel>Food</FormLabel>
+              <FormLabel>Nourriture</FormLabel>
               <Input
                 placeholder="Food"
                 value={reportData.food}
@@ -191,7 +191,7 @@ const AnimalReport = () => {
               />
             </FormControl>
             <FormControl mb={4}>
-              <FormLabel>Quantity</FormLabel>
+              <FormLabel>Quantité</FormLabel>
               <NumberInput
                 value={reportData.quantity}
                 onChange={(value) => setReportData({ ...reportData, quantity: value })}
@@ -222,10 +222,10 @@ const AnimalReport = () => {
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="teal" onClick={handleCreateReport} isLoading={createVetReportMutation.isLoading}>
-              Submit
+              Soumettre
             </Button>
             <Button variant="outline" onClick={onAddReportClose} ml={3}>
-              Close
+             Fermer
             </Button>
           </ModalFooter>
         </ModalContent>
@@ -235,7 +235,7 @@ const AnimalReport = () => {
       <Modal isOpen={isDetailsOpen} onClose={onDetailsClose} size="xl">
   <ModalOverlay />
   <ModalContent>
-    <ModalHeader>Vet Reports</ModalHeader>
+    <ModalHeader>Connaître les rapports</ModalHeader>
     <ModalBody>
       {reportsLoading ? (
         <Spinner size="xl" color="teal.500" display="block" mx="auto" my={6} />
@@ -254,18 +254,18 @@ const AnimalReport = () => {
           >
             <Flex direction="column" gap={3}>
               <Text fontSize="lg" fontWeight="bold" color="teal.600">
-                Report #{index + 1}
+                Rapport #{index + 1}
               </Text>
               <Box borderBottom="1px" borderColor="gray.200" mb={4} />
 
               <Text fontSize="md" fontWeight="semibold" color="gray.700">
-                <strong>State:</strong> {report.state}
+                <strong>État:</strong> {report.state}
               </Text>
               <Text fontSize="md" fontWeight="semibold" color="gray.700">
-                <strong>Food:</strong> {report.food}
+                <strong>Nourriture:</strong> {report.food}
               </Text>
               <Text fontSize="md" fontWeight="semibold" color="gray.700">
-                <strong>Quantity:</strong> {report.quantity}
+                <strong>Quantité en kg:</strong> {report.quantity}
               </Text>
               <Text fontSize="md" fontWeight="semibold" color="gray.700">
                 <strong>Date:</strong> {new Date(report.date).toLocaleDateString()}
@@ -280,7 +280,7 @@ const AnimalReport = () => {
     </ModalBody>
     <ModalFooter>
       <Button variant="outline" onClick={onDetailsClose}>
-        Close
+        Fermer
       </Button>
     </ModalFooter>
   </ModalContent>

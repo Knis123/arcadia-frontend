@@ -99,7 +99,7 @@ const CreateHabitat = () => {
         <ModalOverlay />
         <ModalContent borderRadius="md" shadow="lg" overflow="hidden">
           <ModalHeader bg="gray.100" borderBottom="1px solid" borderColor="gray.200" textAlign="center">
-            Create Habitat
+            Créer un habitat
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody bg="white">
@@ -112,14 +112,14 @@ const CreateHabitat = () => {
                 <Form>
                   <VStack spacing={4} align="stretch">
                     <FormControl>
-                      <FormLabel fontWeight="medium">Habitat Name</FormLabel>
-                      <Field as={Input} name="name" placeholder="Enter habitat name" focusBorderColor="teal.400" />
+                      <FormLabel fontWeight="medium">Nom de l'habitat</FormLabel>
+                      <Field as={Input} name="name" placeholder="Entrez le nom de l'habitat" focusBorderColor="teal.400" />
                       <ErrorMessage name="name" component={FormErrorMessage} />
                     </FormControl>
 
                     <FormControl>
                       <FormLabel fontWeight="medium">Description</FormLabel>
-                      <Field as={Textarea} name="description" placeholder="Enter description" focusBorderColor="teal.400" />
+                      <Field as={Textarea} name="description" placeholder="Entrez description" focusBorderColor="teal.400" />
                       <ErrorMessage name="description" component={FormErrorMessage} />
                     </FormControl>
 
@@ -130,10 +130,10 @@ const CreateHabitat = () => {
                   </VStack>
                   <ModalFooter  borderTop="1px solid" borderColor="gray.200">
                     <Button onClick={onClose} variant="outline" colorScheme="gray" mr={3}>
-                      Cancel
+                      Annuler
                     </Button>
                     <Button colorScheme="teal" isLoading={isSubmitting} type="submit">
-                      Save
+                      Sauvegarder
                     </Button>
                   </ModalFooter>
                 </Form>

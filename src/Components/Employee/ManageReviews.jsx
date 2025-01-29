@@ -91,17 +91,17 @@ const ManageReviews = () => {
   return (
     <Box p={6} maxW="8xl" mx="auto" py={8}>
       <Heading size="lg" color="gray.800" fontWeight="bold" mb={6}>
-        Manage Reviews
+        Gérer les avis
       </Heading>
 
       {/* Visible Reviews Section */}
       <Box mb={6}>
-        <Heading size="md" color="gray.700" mb={4}>Visible Reviews</Heading>
+        <Heading size="md" color="gray.700" mb={4}>Avis visibles</Heading>
         <Table variant="striped" colorScheme="gray" borderColor="gray.200" rounded="lg">
           <Thead bg="gray.100">
             <Tr>
               <Th>Pseudo</Th>
-              <Th>Comment</Th>
+              <Th>Commentaire</Th>
               <Th>Actions</Th>
             </Tr>
           </Thead>
@@ -118,7 +118,7 @@ const ManageReviews = () => {
                       variant="outline"
                       onClick={() => handleToggleVisibility(review._id)}
                     >
-                      Hide
+                      Cacher
                     </Button>
                     <IconButton
                       icon={<InfoIcon />}
@@ -138,12 +138,12 @@ const ManageReviews = () => {
 
       {/* Hidden Reviews Section */}
       <Box mb={6}>
-        <Heading size="md" color="gray.700" mb={4}>Hidden Reviews</Heading>
+        <Heading size="md" color="gray.700" mb={4}>Critiques cachées</Heading>
         <Table variant="striped" colorScheme="gray" borderColor="gray.200" rounded="lg">
           <Thead bg="gray.100">
             <Tr>
               <Th>Pseudo</Th>
-              <Th>Comment</Th>
+              <Th>Commentaire</Th>
               <Th>Actions</Th>
             </Tr>
           </Thead>
@@ -160,7 +160,7 @@ const ManageReviews = () => {
                       variant="outline"
                       onClick={() => handleToggleVisibility(review._id)}
                     >
-                      Show
+                      Montrer
                     </Button>
                     <IconButton
                       icon={<InfoIcon />}
@@ -182,20 +182,20 @@ const ManageReviews = () => {
       <Modal isOpen={isDetailsOpen} onClose={onDetailsClose} size="xl">
         <ModalOverlay />
         <ModalContent maxWidth="90%" px={10} py={8} bg="white" boxShadow="lg" rounded="md">
-          <ModalHeader fontSize="2xl" fontWeight="bold">Review Details</ModalHeader>
+          <ModalHeader fontSize="2xl" fontWeight="bold">Examiner les détails</ModalHeader>
           <ModalBody fontSize="lg">
             {selectedReview ? (
               <Box>
                 <Text mb={2}><strong>Pseudo:</strong> {selectedReview.pseudo}</Text>
-                <Text mb={2}><strong>Comment:</strong> {selectedReview.comment}</Text>
-                <Text mb={2}><strong>Visibility:</strong> {selectedReview.isVisible ? 'Visible' : 'Hidden'}</Text>
+                <Text mb={2}><strong>Commentaire:</strong> {selectedReview.comment}</Text>
+                <Text mb={2}><strong>Visibilité:</strong> {selectedReview.isVisible ? 'Visible' : 'Hidden'}</Text>
               </Box>
             ) : (
-              <Text>No review selected</Text>
+              <Text>Aucune revue sélectionnée</Text>
             )}
           </ModalBody>
           <ModalFooter>
-            <Button variant="outline" onClick={onDetailsClose} size="lg" colorScheme="blue">Close</Button>
+            <Button variant="outline" onClick={onDetailsClose} size="lg" colorScheme="blue">Fermer</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

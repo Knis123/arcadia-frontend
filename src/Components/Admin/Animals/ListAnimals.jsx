@@ -145,7 +145,7 @@ const AnimalComponent = () => {
   return (
     <Box p={6} maxW="7xl" mx="auto" bg="gray.50" borderRadius="lg" boxShadow="xl">
       <Flex justifyContent="space-between" alignItems="center" mb={6}>
-        <Heading size="lg" color="green.600">Manage Animals</Heading>
+        <Heading size="lg" color="green.600">Gérer les animaux</Heading>
         <CreateAnimal isOpen={isEditModalOpen} onClose={onEditClose} />
       </Flex>
 
@@ -208,10 +208,10 @@ const AnimalComponent = () => {
     <ModalHeader borderBottomWidth="1px" p={6}>
       <Flex justifyContent="space-between" alignItems="center">
         <Text fontSize="2xl" fontWeight="bold" color="gray.800">
-          Animal Details
+          Détails des animaux
         </Text>
         <Button variant="ghost" onClick={onDetailsClose} colorScheme="gray">
-          Close
+          Fermer
         </Button>
       </Flex>
     </ModalHeader>
@@ -227,7 +227,7 @@ const AnimalComponent = () => {
           <Avatar  src={selectedAnimal?.imagesUrl[0]} size="lg" mr={4} />
           </Flex>
           <Text fontSize="lg" color="gray.700">
-            <strong>Name:</strong> {selectedAnimal?.name || 'Unknown'}
+            <strong>Nom:</strong> {selectedAnimal?.name || 'Unknown'}
           </Text>
           <Text fontSize="lg" color="gray.700">
             <strong>Race:</strong> {selectedAnimal?.race || 'Unknown'}
@@ -236,7 +236,7 @@ const AnimalComponent = () => {
             <strong>Habitat:</strong> {selectedAnimal?.habitat?.name || 'Unknown'}
           </Text>
           <Text fontSize="lg" color="gray.700">
-            <strong>nombre de views:</strong> {selectedAnimal?.stats?.views || 0}
+            <strong>Nom des vues:</strong> {selectedAnimal?.stats?.views || 0}
           </Text>
         </Box>
         {/* <Text color="red">Views: {animal.stats?.views || 0}</Text> */}
@@ -249,7 +249,7 @@ const AnimalComponent = () => {
               🩺
             </Box>
             <Heading size="md" color="purple.700">
-              Vet Reports
+               rapports vétérinaire 
             </Heading>
           </Flex>
           {selectedAnimal?.vetReports?.length > 0 ? (
@@ -258,9 +258,9 @@ const AnimalComponent = () => {
                 <Tr>
                   <Th>Date</Th>
                   <Th>Details</Th>
-                  <Th>Food</Th>
-                  <Th>Quantity</Th>
-                  <Th>State</Th>
+                  <Th>Nourriture</Th>
+                  <Th>Quantité</Th>
+                  <Th>État</Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -277,7 +277,7 @@ const AnimalComponent = () => {
             </Table>
           ) : (
             <Text fontSize="lg" color="gray.600">
-              No vet reports available.
+              Aucun rapport de vétérinaire disponible.
             </Text>
           )}
         </Box>
@@ -289,7 +289,7 @@ const AnimalComponent = () => {
               🍽️
             </Box>
             <Heading size="md" color="orange.700">
-              Food Records
+              alimentations
             </Heading>
           </Flex>
           {selectedAnimal?.foodRecords?.length > 0 ? (
@@ -297,8 +297,8 @@ const AnimalComponent = () => {
               <Thead bg="gray.100">
                 <Tr>
                   <Th>Date</Th>
-                  <Th>Food</Th>
-                  <Th>Quantity</Th>
+                  <Th>Nourriture</Th>
+                  <Th>Quantité</Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -313,7 +313,7 @@ const AnimalComponent = () => {
             </Table>
           ) : (
             <Text fontSize="lg" color="gray.600">
-              No food records available.
+              Pas de dossiers alimentaires disponibles.
             </Text>
           )}
         </Box>
@@ -322,7 +322,7 @@ const AnimalComponent = () => {
 
     <ModalFooter borderTopWidth="1px" p={6}>
       <Button variant="outline" onClick={onDetailsClose} colorScheme="gray" mr={3}>
-        Cancel
+        Annuler
       </Button>
      
     </ModalFooter>
@@ -337,7 +337,7 @@ const AnimalComponent = () => {
           <ModalHeader>{selectedAnimal ? 'Edit Animal' : 'Add Animal'}</ModalHeader>
           <ModalBody>
             <FormControl>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nom</FormLabel>
               <Input name="name" value={updatedAnimalData.name || ''} onChange={handleInputChange} />
             </FormControl>
             <FormControl mt={4}>
@@ -350,8 +350,8 @@ const AnimalComponent = () => {
             </FormControl>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="green" onClick={handleUpdate}>Save</Button>
-            <Button variant="ghost" onClick={onEditClose}>Cancel</Button>
+            <Button colorScheme="green" onClick={handleUpdate}>Sauvegarder</Button>
+            <Button variant="ghost" onClick={onEditClose}>Annuler</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

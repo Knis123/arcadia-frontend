@@ -128,13 +128,13 @@ const ListHabitat = () => {
   };
 
   if (isLoading) return <Spinner size="xl" color="blue.500" display="block" mx="auto" my={6} />;
-  if (isError) return <Text color="red.500" fontSize="lg" textAlign="center">Error loading habitats</Text>;
+  if (isError) return <Text color="red.500" fontSize="lg" textAlign="center">Erreur de chargement des habitats</Text>;
 
   return (
     <Box p={6} maxW="8xl" mx="auto" py={8}>
       <Flex justifyContent="space-between" alignItems="center" mb={6}>
         <Heading size="lg" color="gray.800" fontWeight="bold">
-          Manage Habitats
+         Gérer les habitats
         </Heading>
         <CreateHabitat />
       </Flex>
@@ -143,7 +143,7 @@ const ListHabitat = () => {
         <Thead bg="gray.100">
           <Tr>
             <Th>Image</Th>
-            <Th>Name</Th>
+            <Th>Nom</Th>
             <Th>Actions</Th>
           </Tr>
         </Thead>
@@ -206,11 +206,11 @@ const ListHabitat = () => {
       {selectedHabitat ? (
         <HabitatDetails habitatId={selectedHabitat._id} />
       ) : (
-        <Text>No habitat selected</Text>
+        <Text>Aucun habitat sélectionné</Text>
       )}
     </ModalBody>
     <ModalFooter>
-      <Button variant="outline" onClick={onDetailsClose} size="lg">Close</Button>
+      <Button variant="outline" onClick={onDetailsClose} size="lg">Fermer</Button>
     </ModalFooter>
   </ModalContent>
 </Modal>
@@ -220,11 +220,11 @@ const ListHabitat = () => {
       <Modal isOpen={isEditOpen} onClose={onEditClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edit Habitat</ModalHeader>
+          <ModalHeader>Modifier l'habitat</ModalHeader>
           <ModalBody>
             <VStack spacing={4} align="stretch">
               <FormControl>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nom</FormLabel>
                 <Input
                   value={updatedHabitatData.name || ''}
                   onChange={(e) => setUpdatedHabitatData({ ...updatedHabitatData, name: e.target.value })}
@@ -247,8 +247,8 @@ const ListHabitat = () => {
             </VStack>
           </ModalBody>
           <ModalFooter>
-            <Button variant="outline" onClick={onEditClose}>Cancel</Button>
-            <Button colorScheme="blue" onClick={handleUpdate}>Save Changes</Button>
+            <Button variant="outline" onClick={onEditClose}>Annuler</Button>
+            <Button colorScheme="blue" onClick={handleUpdate}>Enregistrer les modifications</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -30,7 +30,7 @@ const HabitatDetails = ({ habitatId }) => {
   if (isError) {
     return (
       <Flex justify="center" align="center" height="100vh">
-        <Text color="red.500" fontSize="xl">Error fetching habitat details</Text>
+        <Text color="red.500" fontSize="xl">Error Rending Habitat Détails</Text>
       </Flex>
     );
   }
@@ -39,7 +39,7 @@ const HabitatDetails = ({ habitatId }) => {
   if (!data) {
     return (
       <Flex justify="center" align="center" height="100vh">
-        <Text color="gray.500" fontSize="xl">No habitat details found</Text>
+        <Text color="gray.500" fontSize="xl">Aucun détail d'habitat trouvé </Text>
       </Flex>
     );
   }
@@ -55,7 +55,7 @@ const HabitatDetails = ({ habitatId }) => {
       {/* Action Buttons */}
       <Flex justify="flex-start" align="center" mb={6}>
         <Button colorScheme="teal" leftIcon={<FaEdit />} onClick={() => setIsModalOpen(true)}>
-          Edit Habitat
+         Modifier l'habitat
         </Button>
         <IconButton
           icon={<FaTrashAlt />}
@@ -78,7 +78,7 @@ const HabitatDetails = ({ habitatId }) => {
             alignItems="center"
           >
             <FaDog size={20} style={{ marginRight: 8 }} />
-            Animals
+            Animaux
           </Tab>
         </TabList>
 
@@ -118,7 +118,7 @@ const HabitatDetails = ({ habitatId }) => {
                 ))
               ) : (
                 <Text color="gray.500" fontSize="lg" textAlign="center" w="full">
-                  No animals found for this habitat.
+                  Aucun animal trouvé pour cet habitat.
                 </Text>
               )}
             </Grid>
@@ -130,7 +130,7 @@ const HabitatDetails = ({ habitatId }) => {
       <Modal isOpen={isModalOpen} onClose={handleModalClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edit Habitat</ModalHeader>
+          <ModalHeader>Modifier l'habitat</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             {/* Modal content goes here */}
@@ -138,9 +138,9 @@ const HabitatDetails = ({ habitatId }) => {
 
           <ModalFooter>
             <Button colorScheme="blue" mr={3}>
-              Save Changes
+              Enregistrer les modifications
             </Button>
-            <Button variant="ghost" onClick={handleModalClose}>Cancel</Button>
+            <Button variant="ghost" onClick={handleModalClose}>Annuler </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -46,10 +46,10 @@ const Habitat = () => {
           color="yellow.400"
           letterSpacing="widest"
         >
-          Discover Wild Habitats
+          Découvrez les habitats sauvages
         </Heading>
         <Text fontSize="lg" mt={4} color="gray.300">
-          Embark on a journey through Earth’s most captivating environments.
+          Embarquez dans un voyage à travers les environnements les plus captivants de la Terre.
         </Text>
       </Box>
 

@@ -100,13 +100,13 @@ const ZooService = () => {
   };
 
   if (isLoading) return <Spinner size="xl" color="green.500" display="block" mx="auto" my={6} />;
-  if (isError) return <Text color="red.500" fontSize="lg" textAlign="center">Error loading services</Text>;
+  if (isError) return <Text color="red.500" fontSize="lg" textAlign="center">Services de chargement d'erreur</Text>;
 
   return (
     <Box p={6} maxW="6xl" mx="auto">
       <Flex justifyContent="space-between" alignItems="center" mb={6}>
         <Heading size="lg" color="gray.800" fontWeight="bold">
-          Manage Zoo Services
+         Gérer les services de zoo
         </Heading>
        
       </Flex>
@@ -115,7 +115,7 @@ const ZooService = () => {
         <Table variant="simple" size="md" colorScheme="gray">
           <Thead bg="gray.100">
             <Tr>
-              <Th>Name</Th>
+              <Th>Nom</Th>
               <Th>Actions</Th>
             </Tr>
           </Thead>
@@ -160,11 +160,11 @@ const ZooService = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edit Service</ModalHeader>
+          <ModalHeader>Modifier le service</ModalHeader>
           <ModalBody>
             <VStack spacing={4} align="stretch">
               <FormControl>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nom</FormLabel>
                 <Input
                   value={updatedServiceData.name || ''}
                   onChange={(e) => setUpdatedServiceData({ ...updatedServiceData, name: e.target.value })}
@@ -180,8 +180,8 @@ const ZooService = () => {
             </VStack>
           </ModalBody>
           <ModalFooter>
-            <Button variant="outline" onClick={onClose}>Cancel</Button>
-            <Button colorScheme="blue" onClick={handleUpdate}>Save Changes</Button>
+            <Button variant="outline" onClick={onClose}>Annuler</Button>
+            <Button colorScheme="blue" onClick={handleUpdate}>Enregistrer les modifications</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -193,12 +193,12 @@ const ZooService = () => {
           <ModalHeader>Service Details</ModalHeader>
           <ModalBody>
             <VStack spacing={4} align="stretch">
-              <Text fontWeight="bold">Name: {selectedService?.name}</Text>
+              <Text fontWeight="bold">Nom: {selectedService?.name}</Text>
               <Text>Description: {selectedService?.description}</Text>
             </VStack>
           </ModalBody>
           <ModalFooter>
-            <Button variant="outline" onClick={onDetailClose}>Close</Button>
+            <Button variant="outline" onClick={onDetailClose}>Fermer</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

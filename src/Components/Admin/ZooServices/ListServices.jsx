@@ -131,7 +131,7 @@ const ListService = () => {
     <Box p={6} maxW="6xl" mx="auto">
       <Flex justifyContent="space-between" alignItems="center" mb={6}>
         <Heading size="lg" color="gray.800" fontWeight="bold">
-          Manage Zoo Services
+         Gérer les services de zoo
         </Heading>
         <CreateService isOpen={isOpen} onClose={onClose} />
       </Flex>
@@ -140,8 +140,8 @@ const ListService = () => {
         <Table variant="simple" size="md" colorScheme="gray">
           <Thead bg="gray.100">
             <Tr>
-              <Th>Name</Th>
-              <Th>Actions</Th>
+              <Th>Nom</Th>
+              <Th>Action</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -193,11 +193,11 @@ const ListService = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Edit Service</ModalHeader>
+          <ModalHeader>Modifier le service</ModalHeader>
           <ModalBody>
             <VStack spacing={4} align="stretch">
               <FormControl>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nom</FormLabel>
                 <Input
                   value={updatedServiceData.name || ''}
                   onChange={(e) => setUpdatedServiceData({ ...updatedServiceData, name: e.target.value })}
@@ -213,8 +213,8 @@ const ListService = () => {
             </VStack>
           </ModalBody>
           <ModalFooter>
-            <Button variant="outline" onClick={onClose}>Cancel</Button>
-            <Button colorScheme="blue" onClick={handleUpdate}>Save Changes</Button>
+            <Button variant="outline" onClick={onClose}>Annuler</Button>
+            <Button colorScheme="blue" onClick={handleUpdate}>Enregistrer </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -223,7 +223,7 @@ const ListService = () => {
       <Modal isOpen={isDetailOpen} onClose={onDetailClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Service Details</ModalHeader>
+          <ModalHeader>Détails du service</ModalHeader>
           <ModalBody>
             <VStack spacing={4} align="stretch">
               <Text fontWeight="bold">Name: {selectedService?.name}</Text>
@@ -231,7 +231,7 @@ const ListService = () => {
             </VStack>
           </ModalBody>
           <ModalFooter>
-            <Button variant="outline" onClick={onDetailClose}>Close</Button>
+            <Button variant="outline" onClick={onDetailClose}>Fermer</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
